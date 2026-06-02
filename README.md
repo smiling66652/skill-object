@@ -1,11 +1,22 @@
-# task-orchestrator
+# 🔧 task-orchestrator
 
-> AI Agent Task Orchestrator — 智能任务编排器 Skill  
-> 专为 WorkBuddy/CodeBuddy 设计的跨工具任务协调引擎
+<p align="center">
+  <img src="https://img.shields.io/badge/WorkBuddy-Skill-blue?logo=python&logoColor=white" alt="WorkBuddy Skill">
+  <img src="https://img.shields.io/badge/AI%20Agent-Expert-green" alt="AI Agent">
+  <img src="https://img.shields.io/github/license/smiling66652/skill-object?color=blue" alt="License">
+  <img src="https://img.shields.io/github/stars/smiling66652/skill-object?style=social" alt="Stars">
+</p>
 
-## 🔧 是什么
+<p align="center">
+  <strong>AI Agent 智能任务编排器</strong><br>
+  专为 WorkBuddy/CodeBuddy 设计的跨工具任务协调引擎
+</p>
 
-**task-orchestrator** 是一个 WorkBuddy Skill，能让 AI Agent 自动将复杂任务拆解为子任务、为每个子任务匹配最佳工具、定义降级方案、并记录错误日志。
+---
+
+## ✨ 是什么
+
+**task-orchestrator** 是一个 WorkBuddy Skill，让 AI Agent 自动将复杂任务拆解为子任务、为每个子任务匹配最佳工具、定义降级方案、并记录错误日志。
 
 ### 核心能力
 
@@ -13,10 +24,12 @@
 |------|------|
 | 🧩 任务拆解 | 将复杂请求分解为独立子任务，标注依赖关系 |
 | 🔀 工具分配 | 优先级：MCP → Skill → CLI → 直接编码 |
-| ⬇️ 三层降级 | 每个子任务至少一个 Plan B，失败自动降级 |
+| ⚇️ 三层降级 | 每个子任务至少一个 Plan B，失败自动降级 |
 | 📊 并行执行 | 自动识别无依赖子任务，并发执行 |
-| 📝 错误记录 | 所有失败生成 .log 文件 + 手动修复方案 |
+| 📝 错误记录 | 所有失败生成 `.log` 文件 + 手动修复方案 |
 | ✅ 确认机制 | 展示计划 → 用户确认 → 自动执行 |
+
+---
 
 ## 📂 文件结构
 
@@ -25,11 +38,13 @@ task-orchestrator/
 ├── SKILL.md                         # 核心编排逻辑 + 8个预设场景
 ├── references/
 │   ├── tool-discovery.md            # 工具发现与能力映射
-│   ├── orchestration-rules.md       # 编排规则（拆解/并行/提示词）
-│   └── error-handling.md            # 错误处理与降级策略
+│   ├── orchestration-rules.md      # 编排规则（拆解/并行/提示词）
+│   └── error-handling.md           # 错误处理与降级策略
 └── scripts/
-    └── log_error.py                 # 错误日志生成器
+    └── log_error.py                # 错误日志生成器
 ```
+
+---
 
 ## 🎯 8个预设使用场景
 
@@ -43,6 +58,8 @@ task-orchestrator/
 | 6 | 非遗传媒文创 | 非遗、文化、内容 | WebSearch → docx → ImageGen → pptx |
 | 7 | 数据采集+分析 | 数据、爬取、图表 | web-scraper → pandas → matplotlib → docx |
 | 8 | 通用文档处理 | 文档、转换、格式 | docx → xlsx → pptx → pdfkit-py |
+
+---
 
 ## 🚀 快速开始
 
@@ -68,6 +85,8 @@ task-orchestrator/
 → 确认后自动执行：搜索资料 → 写说明书 → 建模 → 生成PPT → 导出PDF
 ```
 
+---
+
 ## 🔄 工作流程
 
 ```
@@ -92,7 +111,9 @@ task-orchestrator/
       └─ 交付最终产物
 ```
 
-## 📋 降级策略
+---
+
+## 🛡️ 降级策略
 
 | 错误类型 | Plan A | Plan B | Plan C |
 |---------|--------|--------|--------|
@@ -101,19 +122,25 @@ task-orchestrator/
 | 服务未运行 | 检查+启动 | 备用工具 | 手动启动指南 |
 | 认证失败 | 检查环境变量 | 备用认证 | 手动认证指南 |
 
-## 🛠️ 依赖技能（推荐安装）
+---
 
-- `pdfkit-py` — PDF 处理（50个命令）
-- `docx` — Word 文档处理
-- `minimax-xlsx` — Excel 高级功能
-- `pptx` — 演示文稿创建
-- `agent-browser-core` — 浏览器自动化
-- `web-scraper` — 网页抓取
-- `solidworks-com-automation` — SW 2024 COM 自动化
-- `education` — 教育学习工具
-- `github` — GitHub 集成
+## 🔗 依赖技能（推荐安装）
 
-## 📊 项目背景
+| Skill | 功能 |
+|--------|------|
+| `pdfkit-py` | PDF 处理（50个命令） |
+| `docx` | Word 文档处理 |
+| `minimax-xlsx` | Excel 高级功能 |
+| `pptx` | 演示文稿创建 |
+| `agent-browser-core` | 浏览器自动化 |
+| `web-scraper` | 网页抓取 |
+| `solidworks-com-automation` | SW 2024 COM 自动化 |
+| `education` | 教育学习工具 |
+| `github` | GitHub 集成 |
+
+---
+
+## 📚 项目背景
 
 ### 为什么创建
 
@@ -137,6 +164,8 @@ task-orchestrator/
 - 每个步骤都有降级方案，不会因单一工具失败而中断
 - 完整错误日志，可追溯可手动修复
 
+---
+
 ## 📦 完整项目产物
 
 | 文件 | 说明 |
@@ -148,10 +177,14 @@ task-orchestrator/
 | `docs/functional-overlap-analysis.md` | 功能重叠分析报告 |
 | `docs/browser-automation-test-results.md` | 浏览器自动化测试详情 |
 
+---
+
 ## 📄 License
 
 MIT
 
 ---
 
-_为 WorkBuddy 生态构建 — 让 AI Agent 真正学会协同工作_
+<div align="center">
+  <sub>为 WorkBuddy 生态构建 — 让 AI Agent 真正学会协同工作</sub>
+</div>
