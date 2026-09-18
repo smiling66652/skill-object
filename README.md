@@ -1,4 +1,9 @@
-# 🔧 task-orchestrator
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner.svg" alt="task-orchestrator — AI Agent 智能任务编排器" width="100%">
+  </picture>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/WorkBuddy-Skill-blue?logo=python&logoColor=white" alt="WorkBuddy Skill">
@@ -89,27 +94,12 @@ task-orchestrator/
 
 ## 🔄 工作流程
 
-```
-用户请求
-  │
-  ├─ Phase 1: 分析 & 规划
-  │   ├─ 解析需求
-  │   ├─ 发现可用工具
-  │   ├─ 拆解子任务
-  │   ├─ 匹配预设场景
-  │   └─ 展示计划表
-  │
-  ├─ Phase 2: 执行（用户确认后）
-  │   ├─ 串行执行依赖步骤
-  │   ├─ 并行执行独立步骤
-  │   ├─ 失败 → Plan B → Plan C
-  │   └─ 记录所有结果
-  │
-  └─ Phase 3: 报告
-      ├─ 汇总成功/失败表
-      ├─ 失败: 写入 .log 文件 + 手动方案
-      └─ 交付最终产物
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/diagram-dark.svg">
+    <img src="assets/diagram.svg" alt="task-orchestrator 三阶段工作流：分析规划 → 执行 → 报告" width="100%">
+  </picture>
+</p>
 
 ---
 
